@@ -28,7 +28,7 @@ $(document).ready(function() {
 	//on button click, retrieve from api
 	$(document).on("click", ".searchTerm", function() {
 		$("#header").html("<h1>" + $(this).html() + "</h1><h2>Click on an image to animate it.</h2>");
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + $(this).attr("data-name") + "&api_key=59beb29549684997b07b2da6b6abb8f1&limit=15";
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + $(this).attr("data-name") + "&api_key=59beb29549684997b07b2da6b6abb8f1&limit=15";
 		$.ajax({ url : queryURL, method:"GET"})
 		.done( function(response){
 			$("#offset-container").empty();
